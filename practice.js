@@ -1,9 +1,16 @@
-let age = 80
+let isGuestOneVegan = false
+let isGuestTwoVegan = false
 
-if (age < 7) {
-	console.log('Hey kiddo!')
-} else if (age > 65) {
-	console.warn('Hey there senior citizen!')
+if (isGuestOneVegan && isGuestTwoVegan) {
+	console.log('Two vegan menus.')
+} else if (isGuestOneVegan || isGuestTwoVegan) {
+	console.log('One vegan menu, one regular menu.')
 } else {
-	console.info('Hello!')
+	console.log('Two regular menus.')
 }
+
+let getTip = function (total = 20) {
+	return `For a bill of $${total}, your tip should be ${total * .15}`
+}
+
+console.log(getTip(30))
